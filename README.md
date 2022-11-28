@@ -14,6 +14,11 @@ npm start
 ```
 gulp wacth
 ```
+### User Credentials
+   email:     user@localhost.com
+   password:   user123
+   
+
 ### General Desc.
 ```
 --> Started application file is app.js;
