@@ -15,7 +15,7 @@ npm start
 gulp wacth
 ```
 ### General Desc.
-
+```
 --> Started application file is app.js;
 --> Gulp settings file is gulpfile.js
    --> gulp assets js and scss/sass file in public js and stylelsheets
@@ -24,6 +24,8 @@ gulp wacth
             ->sidebar.jade;
             ->homepage.jade;
           Login.jade:
+```
+
 
 
 ### File description
