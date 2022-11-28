@@ -29,16 +29,22 @@ gulp wacth
 
 
 ### File description
-  ./assets      = js and scss file
+
+```
+ ./assets      = js and scss file
   ./bin         = project port and env.
   ./controllers = Login and MyAlbum controllers
   ./public      = jade file using this js, stylesheets
   ./routes      = project route files  index and login
   ./services    = api request service
   ./views       = project view template
+```
+ 
   
   
 ### Project lifecycle
+  
+  ```
   project-started -> 
         login page -> 
         " basic " form control and user crendetials control. -> 
@@ -47,12 +53,19 @@ gulp wacth
         thumbnails view ->
         select the thumbnail ->
         and show the big photo of thumbnails.
+```
+  
+  
         
         
 ### HttpRequest:
 
-  I used 'superagent' and 'xhrHttpRequest' when making http requests
+```
+I used 'superagent' and 'xhrHttpRequest' when making http requests
   and you can see example usage axios and ajax request.
+```
+
+  
   
 
 
