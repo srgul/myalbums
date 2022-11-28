@@ -1,0 +1,136 @@
+// @import url('./app.scss'); 
+
+.login {
+  padding-top: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+  .login-header {
+    text-align: start;
+    margin-bottom: 1.5rem;
+  }
+
+  .login-form {
+    width: 100%;
+
+    .form-item {
+      margin-top: 3vh;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .label {
+        padding-left: 1rem;
+        min-width: 25%;
+        padding-top: 0.3rem;
+        label {
+          margin-top: 8px;
+          font-size: 1.1rem;
+          font-weight: 600;
+        }
+      }
+
+      ::placeholder {
+        font-size: 12px;
+        color: black;
+        opacity: 0.5;
+        font-family: "Quicksand", sans-serif;
+        letter-spacing: 2px;
+      }
+
+      .input {
+        margin-left: auto;
+        min-width: 50%;
+        line-height: 22px;
+        input {
+          border: 2px solid black;
+          padding: 0.2rem;
+          font-size: 14px;
+          line-height: 22px;
+          font-weight: 500;
+          padding-left: 1rem;
+        }
+      }
+
+      .login-btn {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5rem 3rem;
+        margin-right: 2rem;
+      }
+    }
+
+    .form-item:nth-child(3) {
+      justify-content: flex-end;
+
+      input {
+        border: 1px solid black;
+        background-color: white;
+        font-weight: 600;
+        box-shadow: 2px 2px black;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .flash-message {
+    margin-top: 1rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: small;
+    padding: 0.2rem;
+    font-weight: 600;
+    color: red;
+  }
+}
+
+$layout-breakpoint-small: 960px;
+
+@media (max-width: $layout-breakpoint-small) {
+  .login {
+    width: 100vw !important;
+    display: block !important;
+    padding-left: 1rem;
+    
+    .login-header {
+      padding-left: 1rem;
+    }
+
+    .login-form .form-item {
+      display: block !important;
+      width: 95vw !important;
+    }
+
+    .login-form .form-item .label {
+      padding-left: 0 !important;
+    } 
+
+    .form-item input {
+      width: 90vw;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      font-weight: 600;
+    }
+
+    .form-item:nth-child(3) {
+      justify-content: center !important;
+      width: 100% !important;
+
+      input {
+        width: max-content;
+        border: 1px solid black;
+        background-color: white;
+        font-weight: 600;
+        box-shadow: 2px 2px black;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .content-area
+    h1 My Albums and Photos
+    .myalbum
+      .sidebar
+        include sidebar.jade
+      .content
+        section.thumbnails
+          if albumsPhoto
+            ul
+              for photo in albumsPhoto
+                li
+                  - url = photo.thumbnailUrl
+                  - albumId = photo.albumId
+                  - id = photo.id
+                  img(onclick="openImg("+ id +" , "+ albumId +");" src=url )
+            .idea
+              p please click the image
+          else
+            p.empty-message Please select album
+            
+    if albumsPhoto
+      section.big-photo
+        img(src="", id="big-photo", alt="", class="big-photo-img")        

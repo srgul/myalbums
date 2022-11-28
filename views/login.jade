@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title Welcome
+    link(rel='stylesheet', href='/stylesheets/app.min.css')
+    script(src="/js/app.min.js")
+  body
+    main
+      .login
+        .login-header 
+          h2 Login
+        form(action="/login" class="login-form"   method="post" id="login-form")
+          .form-item 
+            .label 
+              label(for="email")  Email:
+            .input 
+              input(type="email", placeholder="Mail" name="mail",  id="email", required)
+          .form-item 
+            .label 
+              label(for="password")  Password:
+            .input 
+              input(type="password", placeholder="Password" name="password",  id="password", required)
+          .form-item
+            input(type="submit", class="login-btn", value="Login") 
+        if status
+          p(class="flash-message") #{ status }

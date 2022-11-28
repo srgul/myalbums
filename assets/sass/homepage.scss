@@ -1,0 +1,138 @@
+@use "app.scss";
+
+.content-area {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1 {
+    margin-left: 1rem;
+  }
+
+  .myalbum {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 100px;
+    .sidebar {
+      border: 1px solid black;
+      width: 20%;
+      padding: 1rem;
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .content {
+      width: 75%;
+      border: 1px solid black;
+      margin-left: auto;
+
+      .thumbnails ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        width: 100%;
+        margin-top: 1rem;
+        margin-left: 1rem;
+      }
+
+      .thumbnails li {
+        margin-bottom: 1.5rem;
+        width: 25%;
+
+        img:hover {
+          cursor: pointer;
+        }
+      }
+
+      .idea {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+        font-size: 12px;
+      }
+      .empty-message {
+        margin-left: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .big-photo {
+    display: none;
+    width: 100% !important;
+    .big-photo-img {
+      width: 100% !important;
+      height: 500px;
+    }
+  }
+}
+
+$layout-breakpoint-small: 960px;
+
+@media (max-width: $layout-breakpoint-small) {
+  .content-area {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .myalbum {
+      width: 90vw !important;
+      display: block !important;
+      padding-left: 1rem;
+
+      .sidebar {
+        display: block;
+        border: 1px solid black;
+        width: auto;
+        padding: 1rem;
+        text-align: center;
+        ul li {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .content {
+        margin-top: 1rem;
+        display: block;
+        border: 1px solid black;
+        width: auto;
+        padding: 1rem;
+        text-align: center;
+
+        .thumbnails ul {
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          width: 100%;
+          margin-top: 1rem;
+          margin-left: 1rem;
+        }
+
+        .thumbnails li {
+          margin-bottom: 1.5rem;
+          width: 50%;
+          display: none;
+
+          img:hover {
+            cursor: pointer;
+          }
+        }
+
+        .thumbnails li:nth-child(-n + 4) {
+          display: block;
+        }
+      }
+    }
+
+    .big-photo {
+      display: none;
+      width: 90vw !important;
+      padding-left: 1rem;
+      margin-top: 100px;
+      margin-bottom: 1rem;
+    }
+  }
+}
